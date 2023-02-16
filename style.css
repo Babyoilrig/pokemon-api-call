@@ -43,6 +43,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.pokemon-image {
+    max-width: 25%;
+}
+
 .btn {
   background: none;
   border: none;
