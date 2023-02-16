@@ -4,20 +4,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon!</title>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="style.scss"></link>
 </head>
 <body>
-    <div>
-        <div id="pokemonCard">
-        <h2 id="pokeName"></h2>
-        <img id="pokemonPic">
-        <h4 id="pokedexNo"></h4>
-        <h4 id="pokeHeight"></h4>
-        <h4 id="pokeWeight"></h4>
-        <h4 id="pokeSpeed"></h4>
-        <h4 id="pokeAttack"></h4>
-        <h4 id="pokeDefense"></h4>
-        <button id="button" class="btn-warning" onclick="getPokemon()">Get New Pokemon</button></div>
+    <div class="card" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">
+        <div class="pokemon-header">
+            <h2 id="pokeName"></h2>
+            <img id="pokemonPic">
+        </div>
+        <div class="pokemon-stats">
+            <span id="pokedexNo"></span>
+            <br/>
+            <span id="pokeHeight"></span>
+            <br/>
+            <span id="pokeWeight"></span>
+            <br/>
+            <span id="pokeSpeed"></span>
+            <br/>
+            <span id="pokeAttack"></span>
+            <br/>
+            <span id="pokeDefense"></span>
+            <br/>
+            <span>
+                <button id="button" class="btn-warning" onclick="getPokemon()">Get New Pokemon</button></div>
+            </span>
         </div>
     </div>
 </body>
