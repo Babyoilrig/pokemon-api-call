@@ -32,5 +32,4 @@ let pokeSpeed=document.querySelector("#pokeSpeed")
         // pokeSpecialDefense.innerHTML = "Special Defense: " + pokemon.stats[4].base_stat;
         pokeSpeed.innerHTML = "Speed: " + pokemon.stats[5].base_stat;
 
-    }
-    getPokemon();
+    };
