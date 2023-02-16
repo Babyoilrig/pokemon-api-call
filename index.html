@@ -4,34 +4,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon!</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Sass info - https://www.freecodecamp.org/news/the-beginners-guide-to-sass/-->
-    <div class="card" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">
-        <div class="pokemon-header">
-            <h2>Click the button to get a new Pokemon!</h2>
-            <h3 id="pokeName"></h3>
-            <img id="pokemonPic">
-        </div>
-        <div class="pokemon-stats">
-            <h4 id="pokedexNo"></h4>
-            <br/>
-            <h4 id="pokeHeight"></h4>
-            <br/>
-            <h4 id="pokeWeight"></h4>
-            <br/>
-            <h4 id="pokeSpeed"></h4>
-            <br/>
-            <h4 id="pokeAttack"></h4>
-            <br/>
-            <h4 id="pokeDefense"></h4>
-            <br/>
-            <span>
-                <button id="button" class="btn-warning" onclick="getPokemon()">Get New Pokemon</button>
-            </span>
+    <div class="container">
+        <div class="card">
+            <div class="pokemon-header">
+                <h2>Click the button to get a new Pokemon!</h2>
+                <h3 id="pokeName"></h3>
+                <img id="pokemonPic">
+             </div>
+                <div class="pokemon-stats">
+                     <h4 id="pokedexNo"></h4>
+                    <br/>
+                    <h4 id="pokeHeight"></h4>
+                    <br/>
+                    <h4 id="pokeWeight"></h4>
+                    <br/>
+                    <h4 id="pokeSpeed"></h4>
+                    <br/>
+                    <h4 id="pokeAttack"></h4>
+                    <br/>
+                    <h4 id="pokeDefense"></h4>
+                    <br/>
+                    <button id="button" class="btn-warning" onclick="getPokemon()">Get New Pokemon</button>
+                </div>
         </div>
     </div>
+
 </body>
 <script src="main.js"> </script>
 </html>
