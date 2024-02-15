@@ -34,3 +34,5 @@ let pokeDefense = document.querySelector("#pokeDefense")
     // //If want to get Pokemon on page load (rather than button click) use below:
     // document.querySelector("#button").addEventListener("click", getPokemon);
     //And call function in main.js
+
+    //dwi am updatio hwn a neud yn siwr mae'n gweithio
