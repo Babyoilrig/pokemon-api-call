@@ -29,6 +29,7 @@ async function getPokemon() {
             pokeSpeed.textContent = `Speed: ${pokemon.stats[5].base_stat}`;
             pokeAttack.textContent = `Attack: ${pokemon.stats[1].base_stat}`;
             pokeDefense.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
+            pokeImage.src =`${pokemon.sprites.other.home.front_default}`;
        
 }
 
@@ -46,7 +47,7 @@ const pokemon = getPokemon();
     //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     //     let pokemon = await response.json();
     //     console.log(pokemon.name, pokemon.id, pokemon.types[0].type.name, pokemon.sprites.other.dream_world.front_default);
-        // pokeImage.src = pokemon.sprites.other.dream_world.front_default;
+        
     //     pokeName.innerHTML = pokemon.name;
     //     pokedexNo.innerHTML = "pokedex No: " + pokemon.id;
     //     pokeHeight.innerHTML = "Height: " + pokemon.height;
