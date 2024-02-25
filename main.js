@@ -1,43 +1,52 @@
-let pokeImage = document.querySelector(".pokemonPic")
-let pokeName = document.querySelector(".pokeName")
-let pokedexNo = document.querySelector("#pokedexNo")
-let pokeHeight = document.querySelector(".pokeHeight")
-let pokeWeight = document.querySelector(".pokeWeight")
-let pokeSpeed = document.querySelector(".pokeSpeed")
-let pokeAttack = document.querySelector(".pokeAttack")
-let pokeDefense = document.querySelector(".pokeDefense")
+let pokeImage = document.querySelector(".pokemonPic");
+let pokeName = document.querySelector(".pokeName");
+let pokedexNo = document.querySelector(".pokedexNo");
+let pokeHeight = document.querySelector(".pokeHeight");
+let pokeWeight = document.querySelector(".pokeWeight");
+let pokeSpeed = document.querySelector(".pokeSpeed");
+let pokeAttack = document.querySelector(".pokeAttack");
+let pokeDefense = document.querySelector(".pokeDefense");
+const button = document.querySelector('.btn');
+
+
 // let pokeSpecialAttack=document.querySelector("#pokeSpecial-attack")
 // let pokeSpecialDefense=document.querySelector("#pokeSpecial-defense")
 
 
 async function getPokemon() {
+    console.log('I am get Pokemon and I have run!')
     let id = Math.floor(Math.random() * 1302);
         console.log(id);
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         let pokemon = await response.json();
         console.log(pokemon);
-        pokeName.innerHTML = pokemon.name;
+        console.log(pokemon.name);
+         pokeName.textContent = `Name: ${pokemon.name}`;
+         console.log(pokemon.id);
+         pokedexNo.textContent = `Pokedex No: ${id}`;
+          pokeHeight.textContent = `Height: ${pokemon.height} cm`;
+            pokeWeight.textContent = `Weight: ${pokemon.weight} kg`;
+            pokeSpeed.textContent = `Speed: ${pokemon.stats[5].base_stat}`;
+            pokeAttack.textContent = `Attack: ${pokemon.stats[1].base_stat}`;
+            pokeDefense.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
        
 }
 
 const pokemon = getPokemon();
 
-     pokedexNo.innerText = `pokedex No: ${pokemon.id}`;
-            // pokeHeight.innerText = "Height: " + pokemon.height;
-            // pokeWeight.innerText = "Weight: " + pokemon.weight;
-            // pokeSpeed.innerText = "Speed: " + pokemon.stats[5].base_stat;
-            // pokeAttack.innerText = "Attack: " + pokemon.stats[1].base_stat;
-            // pokeDefense.innertext = "Defense: " + pokemon.stats[2].base_stat;
+     
+           
 
 
-        
+            button.addEventListener('click', getPokemon);
+
     // async function getPokemon() {
     //     let id = Math.floor(Math.random() * 1118) + 1;
     //     console.log(id);
     //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     //     let pokemon = await response.json();
     //     console.log(pokemon.name, pokemon.id, pokemon.types[0].type.name, pokemon.sprites.other.dream_world.front_default);
-    //     // pokeImage.src = pokemon.sprites.other.dream_world.front_default;
+        // pokeImage.src = pokemon.sprites.other.dream_world.front_default;
     //     pokeName.innerHTML = pokemon.name;
     //     pokedexNo.innerHTML = "pokedex No: " + pokemon.id;
     //     pokeHeight.innerHTML = "Height: " + pokemon.height;
