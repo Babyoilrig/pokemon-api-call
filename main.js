@@ -1,11 +1,11 @@
-let pokeImage = document.querySelector(".pokemonPic");
-let pokeName = document.querySelector(".pokeName");
-let pokedexNo = document.querySelector(".pokedexNo");
-let pokeHeight = document.querySelector(".pokeHeight");
-let pokeWeight = document.querySelector(".pokeWeight");
-let pokeSpeed = document.querySelector(".pokeSpeed");
-let pokeAttack = document.querySelector(".pokeAttack");
-let pokeDefense = document.querySelector(".pokeDefense");
+let pokeImage = document.querySelector(".pokemon-pic");
+let pokeName = document.querySelector(".poke-name");
+let pokedexNo = document.querySelector(".pokedex-number");
+let pokeHeight = document.querySelector(".poke-height");
+let pokeWeight = document.querySelector(".poke-weight");
+let pokeSpeed = document.querySelector(".poke-speed");
+let pokeAttack = document.querySelector(".poke-attack");
+let pokeDefence = document.querySelector(".poke-defence");
 const button = document.querySelector('.btn');
 
 
@@ -20,16 +20,18 @@ async function getPokemon() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         let pokemon = await response.json();
         console.log(pokemon);
-        console.log(pokemon.name);
-         pokeName.textContent = `Name: ${pokemon.name}`;
+        //Functionality to change first letter to upper case
+        const upperCaseName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+        console.log(upperCaseName);
+         pokeName.textContent = `Name: ${upperCaseName}`;
          console.log(pokemon.id);
          pokedexNo.textContent = `Pokedex No: ${id}`;
           pokeHeight.textContent = `Height: ${pokemon.height} cm`;
             pokeWeight.textContent = `Weight: ${pokemon.weight} kg`;
             pokeSpeed.textContent = `Speed: ${pokemon.stats[5].base_stat}`;
             pokeAttack.textContent = `Attack: ${pokemon.stats[1].base_stat}`;
-            pokeDefense.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
-            pokeImage.src =`${pokemon.sprites.other.home.front_default}`;
+            pokeDefence.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
+            pokeImage.src = `${pokemon.sprites.other.home.front_default}`;
        
 }
 
