@@ -22,8 +22,8 @@ body {
 .card {
     display: flex;
     flex-direction: row;
-  width: 800px;
-  min-height: 250px;
+  /* width: 800px; */
+  height: 100vh;
   background: rgba( 255, 255, 255, 0.15 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 18px );
@@ -33,7 +33,7 @@ body {
   padding: 1.5rem;
   z-index: 10;
   color: whitesmoke;
-  margin: 3rem;
+  margin: 5rem;
 }
 
 .title {
@@ -46,8 +46,15 @@ body {
   margin-bottom: 2rem;
 }
 
+.main-image-container {
+  width: 20px;
+  background-color: red;
+  object-fit: contain;
+}
+
 .pokemon-image {
-    max-width: 25%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn {
