@@ -27,7 +27,7 @@ body {
   /* width: 800px; */
   height: 100%;
   background: rgba( 255, 255, 255, 0.15 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 32px 0 #2bca63;
   backdrop-filter: blur( 18px );
   -webkit-backdrop-filter: blur( 18px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -48,6 +48,9 @@ body {
 .title {
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  color: #92ca2b;
+  /* border: solid; */
+  padding: 1.5rem;
 }
 
 .subtitle {
@@ -58,11 +61,15 @@ body {
 .main-image-container {
   display: flex;
   flex-direction: column;
-  width: 9rem;
+  width: 11rem;
   background-color: white;
   object-fit: contain;
   border-radius: 50%;
   padding: 1rem;
+  border: solid;
+  border-color: #ca2c92;
+  border-width: 1rem;
+  margin-bottom: 1rem;
 }
 
 .pokemon-image {
@@ -76,7 +83,7 @@ body {
   text-align: center;
   font-size: 1rem;
   color: whitesmoke;
-  background-color: #fa709a;
+  background-color: #ca2c92;
   padding: 0.8rem 1.8rem;
   border-radius: 2rem;
   cursor: pointer;
