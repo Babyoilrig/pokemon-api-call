@@ -1,12 +1,13 @@
-let pokeImage = document.querySelector(".pokemon-pic");
-let pokeName = document.querySelector(".poke-name");
-let pokedexNo = document.querySelector(".pokedex-number");
-let pokeHeight = document.querySelector(".poke-height");
-let pokeWeight = document.querySelector(".poke-weight");
-let pokeSpeed = document.querySelector(".poke-speed");
-let pokeAttack = document.querySelector(".poke-attack");
-let pokeDefence = document.querySelector(".poke-defence");
+const pokeImage = document.querySelector(".pokemon-pic");
+const pokeName = document.querySelector(".poke-name");
+const pokedexNo = document.querySelector(".pokedex-number");
+const pokeHeight = document.querySelector(".poke-height");
+const pokeWeight = document.querySelector(".poke-weight");
+const pokeSpeed = document.querySelector(".poke-speed");
+const pokeAttack = document.querySelector(".poke-attack");
+const pokeDefence = document.querySelector(".poke-defence");
 const button = document.querySelector('.btn');
+const title = document.querySelector('.title');
 
 
 // let pokeSpecialAttack=document.querySelector("#pokeSpecial-attack")
@@ -23,7 +24,7 @@ async function getPokemon() {
         //Functionality to change first letter to upper case
         const upperCaseName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
         console.log(upperCaseName);
-         pokeName.textContent = `Name: ${upperCaseName}`;
+         title.textContent = `${upperCaseName}`;
          console.log(pokemon.id);
          pokedexNo.textContent = `Pokedex No: ${id}`;
           pokeHeight.textContent = `Height: ${pokemon.height} cm`;
