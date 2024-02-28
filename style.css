@@ -7,6 +7,7 @@
 
 body {
   background: #1f1f47
+  /* background: turquoise; */
 }
 
 .container {
@@ -29,6 +30,7 @@ body {
   background: rgba( 255, 255, 255, 0.15 );
   /* background: white; */
   box-shadow: 0 8px 32px 0 #2bca63;
+  /* box-shadow: 0 8px 32px 0 #ca2c92; */
   backdrop-filter: blur( 18px );
   -webkit-backdrop-filter: blur( 18px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -50,6 +52,7 @@ body {
   font-size: 3.2rem;
   margin-bottom: 1rem;
   color: #92ca2b;
+  /* color: turquoise; */
   /* border: solid; */
   padding: 1.5rem;
 }
