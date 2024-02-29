@@ -22,9 +22,14 @@ async function getPokemon() {
     console.log(id);
     try {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-      const pokemon = await response.json();
-      console.log(pokemon);
-    } catch (error) {
+      if (response.ok) {
+        console.log('Promise resolved and HTTP status is successful');
+        const pokemon = await response.json();
+        console.log(pokemon);
+      } else {
+        console.error('Promise resolved but HTTP status failed');
+      }
+     } catch (error) {
       console.log(error);
     }
         //Functionality to change first letter to upper case
