@@ -26,29 +26,31 @@ async function getPokemon() {
         console.log('Promise resolved and HTTP status is successful');
         const pokemon = await response.json();
         console.log(pokemon);
+        // console.log(error);
+        // Functionality to change first letter to upper case
+        const upperCaseName = pokemon.name.toUpperCase() + pokemon.name.slice(1);
+        console.log(upperCaseName);
+         title.textContent = `${upperCaseName}`;
+         console.log(pokemon.id);
+         pokedexNo.textContent = `Pokedex No: ${id}`;
+          pokeHeight.textContent = `Height: ${pokemon.height} cm`;
+            pokeWeight.textContent = `Weight: ${pokemon.weight} kg`;
+            pokeSpeed.textContent = `Speed: ${pokemon.stats[5].base_stat}`;
+            pokeAttack.textContent = `Attack: ${pokemon.stats[1].base_stat}`;
+            pokeDefence.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
+            pokeImage.src = `${pokemon.sprites.other.home.front_default}`;
+    
+        
       } else {
-        console.error('Promise resolved but HTTP status failed');
+        alert('Uh oh! There was an error - please try again!');
       }
      } catch (error) {
-      console.log(error);
+     
     }
-        //Functionality to change first letter to upper case
-        // const upperCaseName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-        // console.log(upperCaseName);
-        //  title.textContent = `${upperCaseName}`;
-        //  console.log(pokemon.id);
-        //  pokedexNo.textContent = `Pokedex No: ${id}`;
-        //   pokeHeight.textContent = `Height: ${pokemon.height} cm`;
-        //     pokeWeight.textContent = `Weight: ${pokemon.weight} kg`;
-        //     pokeSpeed.textContent = `Speed: ${pokemon.stats[5].base_stat}`;
-        //     pokeAttack.textContent = `Attack: ${pokemon.stats[1].base_stat}`;
-        //     pokeDefence.textContent = `Defense: ${pokemon.stats[2].base_stat}`;
-        //     pokeImage.src = `${pokemon.sprites.other.home.front_default}`;
-        }
+};
 
 const pokemon = getPokemon();
 
 
 button.addEventListener('click', getPokemon);
 
-    
