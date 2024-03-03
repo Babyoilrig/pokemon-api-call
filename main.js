@@ -28,7 +28,7 @@ async function getPokemon() {
         console.log(pokemon);
         // console.log(error);
         // Functionality to change first letter to upper case
-        const upperCaseName = pokemon.name.toUpperCase() + pokemon.name.slice(1);
+        const upperCaseName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
         console.log(upperCaseName);
          title.textContent = `${upperCaseName}`;
          console.log(pokemon.id);
