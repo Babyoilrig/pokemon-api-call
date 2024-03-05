@@ -146,10 +146,5 @@ body {
 
 /*Colour Classes*/
 .pink {
-  .card {
     background-color: #ca2c92;
-  }
-  .main-image-container {
-    background-color: #2bca63;
-  }
 }

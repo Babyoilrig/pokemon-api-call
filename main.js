@@ -8,6 +8,9 @@ const pokeAttack = document.querySelector(".poke-attack");
 const pokeDefence = document.querySelector(".poke-defence");
 const button = document.querySelector('.btn');
 const title = document.querySelector('.title');
+const pinkButton = document.querySelector('.pink-button');
+const mainImageContainer = document.querySelector('.main-image-container');
+const card =  document.querySelector('.card');
 
 // async function getPokemon() {
 //     console.log('I am get Pokemon and I have run!')
@@ -49,8 +52,15 @@ async function getPokemon() {
     }
 };
 
+function changeColour() {
+    console.log('I am the change colour function and I have run!');
+    mainImageContainer.style.backgroundColor = "#2bca63"; 
+    card.style.backgroundColor = "#ca2c92"; 
+}
+
 const pokemon = getPokemon();
 
 
 button.addEventListener('click', getPokemon);
+pinkButton.addEventListener('click', changeColour);
 
