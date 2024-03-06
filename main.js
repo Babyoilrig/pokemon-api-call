@@ -11,6 +11,7 @@ const title = document.querySelector('.title');
 const pinkButton = document.querySelector('.pink-button');
 const mainImageContainer = document.querySelector('.main-image-container');
 const card =  document.querySelector('.card');
+const darkBlueButton = document.querySelector('.dark-blue');
 
 // async function getPokemon() {
 //     console.log('I am get Pokemon and I have run!')
@@ -52,15 +53,25 @@ async function getPokemon() {
     }
 };
 
-function changeColour() {
-    console.log('I am the change colour function and I have run!');
+function changeColourPink() {
+    console.log('I am the change colour pink function and I have run!');
     mainImageContainer.style.backgroundColor = "#2bca63"; 
-    card.style.backgroundColor = "#ca2c92"; 
+    card.style.backgroundColor = "#ca2c92";
+    button.style.backgroundColor = "	#bb44f0";
 }
+
+function changeColourDarkBlue() {
+  console.log('I am the change colour dark blue function and I have run!');
+  mainImageContainer.style.backgroundColor = "#ca2c92"; 
+  card.style.backgroundColor = "rgba( 255, 255, 255, 0.15 )";
+  button.style.backgroundColor = "#ca2c92";
+}
+
 
 const pokemon = getPokemon();
 
 
 button.addEventListener('click', getPokemon);
-pinkButton.addEventListener('click', changeColour);
+pinkButton.addEventListener('click', changeColourPink);
+darkBlueButton.addEventListener('click', changeColourDarkBlue)
 
