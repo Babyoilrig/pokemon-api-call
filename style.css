@@ -98,17 +98,25 @@ body {
   flex-direction: column;
   align-content: flex-end;
   background-color: rgba( 255, 255, 255, 0.15 );
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 0;
   color: rgba(255,255,255, 0.6);
+  padding: 0.8rem;
 
-  /* border-radius: 10px; */
+  border-radius: 10px;
+}
+
+.colour-scheme-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .colour-scheme-button-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -117,17 +125,10 @@ body {
   background-color:rgba( 255, 255, 255, 0.15 );
   color: rgba(255,255,255, 0.6);
   border-color: rgba(255,255,255, 0.6);
+  margin: 0.5rem;
+  padding: 5px;
 }
 
-.colour-scheme-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.colour-scheme-right {
-  display: flex;
-  flex-direction: column;
-}
 
 .blob {
   position: absolute;
